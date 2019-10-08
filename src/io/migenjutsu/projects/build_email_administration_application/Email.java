@@ -9,7 +9,7 @@ public class Email {
     private String department;
     private String password;
     private int mailboxCapacity;
-    private int defaultPasswordLength;
+    private int defaultPasswordLength=10;
     private String alternateEmail;
 
 // Constructor to recieve first & last names
