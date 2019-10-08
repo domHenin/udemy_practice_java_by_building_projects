@@ -29,7 +29,7 @@ public class Email {
 
 // Combine elements to generate email
         email = firstName.toLowerCase()+"."+lastName.toLowerCase()+"@"+department.toLowerCase()+"."+companySuffix;
-        System.out.println("Your Email is: "+email);
+//        System.out.println("Your Email is: "+email);
     }
 
 // Ask for department 'setDepartment()'
@@ -85,6 +85,14 @@ private String randomPassword(int length) {
     public int getMailboxCapacity() { return mailboxCapacity; }
     public String getAlternateEmail() { return alternateEmail; }
     public String getPassword() { return password; }
+
+
+//toString()
+    public String toString() {
+        return "Display Name: " +firstName+" "+ lastName+
+                "\nCompany Email: "+email+
+                "\nMailbox Capacity: "+mailboxCapacity+"mb";
+    }
 
 }
 
