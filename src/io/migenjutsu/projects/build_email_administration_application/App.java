@@ -9,5 +9,7 @@ public class App {
         email.setAlternateEmail("js@gmail.com");
         System.out.println("Alternate Email: "+email.getAlternateEmail());
 
+        System.out.println(email.toString());
+
     }
 }
