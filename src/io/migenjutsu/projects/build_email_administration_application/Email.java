@@ -9,7 +9,7 @@ public class Email {
     private String department;
     private String email;
     private String password;
-    private int mailboxCapacity;
+    private int mailboxCapacity=500;
     private int defaultPasswordLength=10;
     private String alternateEmail;
     private String companySuffix="foocompany.com";
@@ -50,7 +50,7 @@ public class Email {
 
 // Generate a random password
 private String randomPassword(int length) {
-    String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_-+={}[]:;'<>,.?/";
+    String passwordSet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_-+={}[]:;'<>,.?/";
 //        String Capital_chars = "ABCDEFGHIJLMNOPQRSTUVWXYZ";
 //        String Small_chars = "abcdefghijklmnopqrstuvwxyz";
 //        String numbers = "1234567890";
@@ -64,13 +64,27 @@ private String randomPassword(int length) {
         int rand = (int) (Math.random() * passwordSet.length());
         password[i] = passwordSet.charAt(rand);
     }
-//            password[i] = values.toString(rnd.nextInt(values.length()));
+//  password[i] = values.toString(rnd.nextInt(values.length()));
     return new String(password);
 }
 
 
 
 // Set the mailbox capacity
+    public void setMailboxCapacity(int capacity) { this.mailboxCapacity=capacity; }
+
+// Set the alternate email
+    public void setAlternateEmail(String altEmail) { this.alternateEmail=altEmail; }
+
+
+// Change the password
+    public void changePassword(String password) { this.password=password; }
+
+
+//GETTERS:
+    public int getMailboxCapacity() { return mailboxCapacity; }
+    public String getAlternateEmail() { return alternateEmail; }
+    public String getPassword() { return password; }
 
 }
 
