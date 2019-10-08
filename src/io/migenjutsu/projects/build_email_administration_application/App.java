@@ -5,5 +5,9 @@ public class App {
 //        System.out.println("Hello World");
 
         Email email = new Email("John", "Doe");
+
+        email.setAlternateEmail("js@gmail.com");
+        System.out.println("Alternate Email: "+email.getAlternateEmail());
+
     }
 }
