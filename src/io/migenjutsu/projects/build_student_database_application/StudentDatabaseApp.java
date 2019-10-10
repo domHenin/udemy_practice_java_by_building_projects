@@ -14,6 +14,7 @@ public class StudentDatabaseApp {
 //        int number = scanner.nextInt();
 
         Student student = new Student();
+        student.enrol();
 
     }
 }
